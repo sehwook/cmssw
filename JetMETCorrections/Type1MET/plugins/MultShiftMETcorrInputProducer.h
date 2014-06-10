@@ -33,7 +33,6 @@ class MultShiftMETcorrInputProducer : public edm::EDProducer
 
   explicit MultShiftMETcorrInputProducer(const edm::ParameterSet&);
   ~MultShiftMETcorrInputProducer();
-  std::vector<edm::ParameterSet> cfgCorrParameters_;
     
  private:
 
@@ -43,6 +42,7 @@ class MultShiftMETcorrInputProducer : public edm::EDProducer
 
 //  edm::EDGetTokenT<edm::View<reco::MET> > token_;
   edm::EDGetTokenT<std::vector<reco::PFCandidate> > pflowToken_;
+  std::vector<edm::ParameterSet> cfgCorrParameters_;
 
   std::vector<double> etaMin_, etaMax_;
   std::vector<int> type_, counts_;
