@@ -29,8 +29,8 @@ process.out = cms.OutputModule("PoolOutputModule",
 process.load('JetMETCorrections.Type1MET.correctedMet_cff')
 
 #Replacements for mAOD
-process.corrPfMetMult.vertexCollection = cms.untracked.InputTag("offlineSlimmedPrimaryVertices")
-process.corrPfMetMult.srcPFlow = cms.untracked.InputTag("packedPFCandidates")
+process.corrPfMetMult.vertexCollection = cms.InputTag("offlineSlimmedPrimaryVertices")
+process.corrPfMetMult.srcPFlow = cms.InputTag("packedPFCandidates")
 #
 # RUN!
 #
